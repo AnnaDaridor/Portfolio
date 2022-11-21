@@ -2,7 +2,7 @@
 Quelques uns de mes mini-projets
 
 # Data Viz' :
-- [EDA et DataViz']
+- [EDA et DataViz'](https://github.com/AnnaDaridor/Portfolio/tree/main/EDA%20et%20DataViz')
 
 # Machine Learning :
 - [Modèles simples de classification](https://github.com/AnnaDaridor/Portfolio/tree/main/Mod%C3%A8les%20simples%20de%20classification) (avec Grid Search)
