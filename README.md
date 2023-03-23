@@ -13,4 +13,4 @@ Quelques uns de mes mini-projets
 - [Text Mining](https://github.com/AnnaDaridor/Portfolio/tree/main/Text%20Mining) (WordCloud et analyse de sentiments)
 
 # Deep Learning :
-- [Réseaux de convolution (CNN)] : Santa or not Santa ?
+- [Réseaux de convolution (CNN)](https://github.com/AnnaDaridor/Portfolio/tree/main/R%C3%A9seaux%20de%20convolution%20(CNN)) : Santa or not Santa ?
