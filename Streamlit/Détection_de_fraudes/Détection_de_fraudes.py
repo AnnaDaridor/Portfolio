@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import ConfusionMatrixDisplay, plot_roc_curve, plot_precision_recall_curve, precision_score, recall_score
+from sklearn.metrics import ConfusionMatrixDisplay, RocCurveDisplay, plot_precision_recall_curve, precision_score, recall_score
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
@@ -59,7 +59,7 @@ def main():
             st.pyplot()
         if "Courbe ROC" in graphe:
             st.subheader("Courbe Roc")
-            plot_roc_curve(model, X_test, y_test)
+            RocCurveDisplay(model, X_test, y_test)
             st.pyplot()   
         if "Courbe precision-recall" in graphe:
             st.subheader("Courbe precision-recall")
