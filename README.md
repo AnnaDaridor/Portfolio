@@ -14,3 +14,6 @@ Quelques uns de mes mini-projets
 
 # Deep Learning :
 - [Réseaux de convolution (CNN)](https://github.com/AnnaDaridor/Portfolio/tree/main/R%C3%A9seaux%20de%20convolution%20(CNN)) : Santa or not Santa ?
+
+# Applications Streamlit :
+- [Détection de fraudes à la carte de crédit](https://github.com/AnnaDaridor/Portfolio/tree/main/Streamlit)
