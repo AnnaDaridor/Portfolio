@@ -19,8 +19,7 @@ def main():
     # Fonction d'importation des données
     @st.cache(persist = True) # Pour ne pas recharger data à chaque fois
     def load_data():
-        url = 'https://www.kaggle.com/datasets/arockiaselciaa/creditcardcsv/download?datasetVersionNumber=1'
-        data = pd.read_csv(url)
+        data = pd.read_csv('creditcard.csv')
         return data
 
     # Affichage de la table de données
