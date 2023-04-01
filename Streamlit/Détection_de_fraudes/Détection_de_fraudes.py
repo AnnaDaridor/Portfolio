@@ -15,7 +15,7 @@ def main():
     st.title("Détection de fraude à la carte de crédit grâce au Machine Learning")
 
     # Fonction d'importation des données
-    @st.cache(persist = True) # Pour ne pas recharger data à chaque fois
+   # @st.cache(persist = True) # Pour ne pas recharger data à chaque fois
     def load_data():
         # Dataframes séparés pour pouvoir les importer sur Github
         df_1 = pd.read_csv(r'creditcard_1.csv')
