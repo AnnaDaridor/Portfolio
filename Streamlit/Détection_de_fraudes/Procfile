@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run pyckpocket.py
+web: sh setup.sh && streamlit run Détection_de_fraudes.py
