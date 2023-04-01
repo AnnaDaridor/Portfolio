@@ -15,16 +15,16 @@ def main():
     st.title("Détection de fraude à la carte de crédit grâce au Machine Learning")
 
     # Fonction d'importation des données
-   # @st.cache(persist = True) # Pour ne pas recharger data à chaque fois
+    @st.cache(persist = True) # Pour ne pas recharger data à chaque fois
     def load_data():
         # Dataframes séparés pour pouvoir les importer sur Github
-        df_1 = pd.read_csv(r'creditcard_1.csv')
-        df_2 = pd.read_csv(r'creditcard_2.csv')
-        df_3 = pd.read_csv(r'creditcard_3.csv')
-        df_4 = pd.read_csv(r'creditcard_4.csv')
-        df_5 = pd.read_csv(r'creditcard_5.csv')
-        df_6 = pd.read_csv(r'creditcard_6.csv')
-        df_7 = pd.read_csv(r'creditcard_7.csv')
+        df_1 = pd.read_csv("creditcard_1.csv")
+        df_2 = pd.read_csv("creditcard_2.csv")
+        df_3 = pd.read_csv("creditcard_3.csv")
+        df_4 = pd.read_csv("creditcard_4.csv")
+        df_5 = pd.read_csv("creditcard_5.csv")
+        df_6 = pd.read_csv("creditcard_6.csv")
+        df_7 = pd.read_csv("creditcard_7.csv")
         data = pd.concat([df_1, df_2, df_3, df_4, df_5, df_6, df_7]).drop('Unnamed: 0', axis = 1)
         return data
 
