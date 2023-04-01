@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
+import os
 
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
@@ -18,7 +19,9 @@ def main():
     @st.cache(persist = True) # Pour ne pas recharger data à chaque fois
     def load_data():
         # Dataframes séparés pour pouvoir les importer sur Github
-        df_1 = pd.read_csv("creditcard_1.csv")
+        filename = 'creditcard_1.csv'
+        file_path = os.path.abspath(filename)
+        df_1 = pd.read_csv(file_path)
         df_2 = pd.read_csv("creditcard_2.csv")
         df_3 = pd.read_csv("creditcard_3.csv")
         df_4 = pd.read_csv("creditcard_4.csv")
