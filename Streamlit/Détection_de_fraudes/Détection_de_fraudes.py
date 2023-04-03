@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
-import matplotlib.pyplot as plt
 import os
 
 from sklearn.svm import SVC
@@ -64,8 +63,8 @@ def main():
         if "Matrice de confusion" in graphe:
             st.subheader("Matrice de confusion")
             matrice = pd.crosstab(y_test, y_pred)
-            ConfusionMatrixDisplay(matrice, display_labels = label_names).plot()
-            st.pyplot()
+            st.pyplot(ConfusionMatrixDisplay(matrice, display_labels = label_names))
+            
         if "Courbe ROC" in graphe:
             st.subheader("Courbe Roc")
             RocCurveDisplay(model, X_test, y_test)
