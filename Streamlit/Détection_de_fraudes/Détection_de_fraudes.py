@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import ConfusionMatrixDisplay, RocCurveDisplay, PrecisionRecallDisplay, precision_score, recall_score
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, RocCurveDisplay, PrecisionRecallDisplay, precision_score, recall_score
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
@@ -62,7 +62,7 @@ def main():
     def plot_perf(graphe):
         if "Matrice de confusion" in graphe:
             st.subheader("Matrice de confusion")
-            ConfusionMatrixDisplay(model, X_test, y_test, display_labels = label_names)
+            ConfusionMatrixDisplay(confusion_matrix(y_test, y_pred), display_labels = label_names)
             st.pyplot()
         if "Courbe ROC" in graphe:
             st.subheader("Courbe Roc")
