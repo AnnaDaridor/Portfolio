@@ -168,6 +168,7 @@ def main():
 
             # Initialisation d'un SVM
             model = SVC(
+                probability = True,
                 C = C, 
                 kernel = kernel,
                 gamma = gamma,
