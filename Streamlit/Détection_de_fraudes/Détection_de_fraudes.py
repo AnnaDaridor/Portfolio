@@ -64,7 +64,7 @@ def main():
             st.subheader("Matrice de confusion")
             matrice = confusion_matrix(y_test, y_pred)
             cmd = ConfusionMatrixDisplay(matrice, display_labels = label_names)
-            cmd.plot(cmap=plt.cm.Blues)
+            cmd.plot()
             st.pyplot(bbox_inches='tight')
         if "Courbe ROC" in graphe:
             st.subheader("Courbe Roc")
