@@ -62,9 +62,10 @@ def main():
     def plot_perf(graphe):
         if "Matrice de confusion" in graphe:
             st.subheader("Matrice de confusion")
-            matrice = pd.crosstab(y_test, y_pred)
-            st.pyplot(ConfusionMatrixDisplay(matrice, display_labels = label_names))
-            
+            matrice = confusion_matrix(y_test, y_pred)
+            cmd = ConfusionMatrixDisplay(matrice, display_labels = label_names)
+            cmd.plot(cmap=plt.cm.Blues)
+            st.pyplot(bbox_inches='tight')
         if "Courbe ROC" in graphe:
             st.subheader("Courbe Roc")
             RocCurveDisplay(model, X_test, y_test)
