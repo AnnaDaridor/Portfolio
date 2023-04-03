@@ -87,7 +87,7 @@ def main():
             )
         bootstrap = st.sidebar.radio(
             "Faire du bootstraping ?",
-            ("True", "False")
+            (True, False)
             )   
         # Bootstrap = créer des échantillons d'entraînement aléatoires dans Random Forest, 
         # qui sont ensuite utilisés pour former des arbres de décision. 
