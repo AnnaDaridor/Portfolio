@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, roc_curve, roc_auc_score, RocCurveDisplay, PrecisionRecallDisplay, precision_score, recall_score
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, roc_curve, roc_auc_score, RocCurveDisplay, precision_recall_curve, average_precision_score, PrecisionRecallDisplay, precision_score, recall_score
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
@@ -72,13 +72,18 @@ def main():
             fpr, tpr, thresholds = roc_curve(y_test, y_scores)
             auc = roc_auc_score(y_test, y_scores)
             # Afficher la courbe ROC
-            rcd = RocCurveDisplay(fpr=fpr, tpr=tpr, roc_auc=auc, estimator_name='Mon modèle')
+            rcd = RocCurveDisplay(fpr=fpr, tpr=tpr, roc_auc=auc, estimator_name=classifier)
             rcd.plot()
             st.pyplot(bbox_inches='tight')   
         if "Courbe precision-recall" in graphe:
             st.subheader("Courbe precision-recall")
-            PrecisionRecallDisplay(model, X_test, y_test)
-            st.pyplot()      
+            # Calculer la courbe PR et l'AP
+            precision, recall, thresholds = precision_recall_curve(y_test, y_scores)
+            ap = average_precision_score(y_test, y_scores)
+            # Afficher la courbe PR
+            prd = PrecisionRecallDisplay(precision=precision, recall=recall, average_precision=ap, estimator_name=classifier)
+            prd.plot()
+            st.pyplot(bbox_inches='tight')      
         
 
     # Random Forest
