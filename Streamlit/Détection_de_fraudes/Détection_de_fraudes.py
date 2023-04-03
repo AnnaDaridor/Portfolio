@@ -8,7 +8,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, RocCurveDisplay, PrecisionRecallDisplay, precision_score, recall_score
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, roc_curve, roc_auc_score, RocCurveDisplay, PrecisionRecallDisplay, precision_score, recall_score
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
@@ -68,8 +68,13 @@ def main():
             st.pyplot(bbox_inches='tight')
         if "Courbe ROC" in graphe:
             st.subheader("Courbe Roc")
-            RocCurveDisplay(model, X_test, y_test)
-            st.pyplot()   
+            # Calculer la courbe ROC et l'AUC
+            fpr, tpr, thresholds = roc_curve(y_test, y_scores)
+            auc = roc_auc_score(y_test, y_scores)
+            # Afficher la courbe ROC
+            rcd = RocCurveDisplay(fpr=fpr, tpr=tpr, roc_auc=auc, estimator_name='Mon modèle')
+            rcd.plot()
+            st.pyplot(bbox_inches='tight')   
         if "Courbe precision-recall" in graphe:
             st.subheader("Courbe precision-recall")
             PrecisionRecallDisplay(model, X_test, y_test)
@@ -115,6 +120,9 @@ def main():
 
             # Prédictions
             y_pred = model.predict(X_test)
+            
+            # Calcul des probabilités de prédiction pour les données de test
+            y_scores = model.predict_proba(X_test)[:, 1]
 
             # Métriques de performance
             accuracy = model.score(X_test, y_test)
