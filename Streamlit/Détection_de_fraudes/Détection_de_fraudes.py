@@ -63,7 +63,7 @@ def main():
         if "Matrice de confusion" in graphe:
             st.subheader("Matrice de confusion")
             matrice = confusion_matrix(y_test, y_pred)
-            ConfusioMatrixDisplay(matrice, display_labels = label_names)
+            ConfusionMatrixDisplay(matrice, display_labels = label_names)
             st.pyplot()
         if "Courbe ROC" in graphe:
             st.subheader("Courbe Roc")
