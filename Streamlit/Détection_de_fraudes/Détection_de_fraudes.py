@@ -178,6 +178,9 @@ def main():
 
             # Prédictions
             y_pred = model.predict(X_test)
+            
+            # Calcul des probabilités de prédiction pour les données de test
+            y_scores = model.predict_proba(X_test)[:, 1]
 
             # Métriques de performance
             accuracy = model.score(X_test, y_test)
@@ -223,6 +226,9 @@ def main():
 
             # Prédictions
             y_pred = model.predict(X_test)
+            
+            # Calcul des probabilités de prédiction pour les données de test
+            y_scores = model.predict_proba(X_test)[:, 1]
 
             # Métriques de performance
             accuracy = model.score(X_test, y_test)
