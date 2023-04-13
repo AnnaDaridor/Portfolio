@@ -17,3 +17,4 @@ Quelques uns de mes mini-projets
 
 # Applications Streamlit :
 - [Détection de fraudes à la carte de crédit](https://github.com/AnnaDaridor/Portfolio/tree/main/Streamlit)
+- [Sytème de recommandations de films](https://github.com/AnnaDaridor/Portfolio/tree/main/Streamlit/Recommandations%20de%20films)
