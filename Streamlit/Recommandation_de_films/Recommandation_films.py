@@ -86,11 +86,11 @@ def recommend_movies(title, cosine_sim=cosine_sim, movies=movies):
 
 
 # Interface utilisateur
-st.title('Système de recommandation de films')
+st.title('Système de recommandation de films et de séries')
 st.subheader('Base de données Netflix')
 
 # Formulaire pour entrer le titre du film
-movie_title = st.text_input('Entrez le titre d\'un film que vous avez aimé :')
+movie_title = st.text_input('Entrez le titre d\'un film ou d\'une série que vous avez aimé :')
 
 
 # Bouton pour obtenir les recommandations de films
