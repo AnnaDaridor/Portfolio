@@ -11,7 +11,7 @@ from fuzzywuzzy import process, fuzz
 
 
 # Charger le jeu de données de films
-movies = pd.read_csv('netflix_titles.csv')
+movies = pd.read_csv('Streamlit/Recommandation_de_films/netflix_titles.csv')
 
 # Pour supprimer les virgules
 def clean_data(x):
