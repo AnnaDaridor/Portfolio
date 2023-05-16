@@ -1,5 +1,5 @@
-# Portfolio (en construction...)
-Quelques uns de mes mini-projets
+# Portfolio
+Quelques uns de mes projets personnels
 
 # Data Viz' :
 - [EDA et DataViz'](https://github.com/AnnaDaridor/Portfolio/tree/main/EDA%20et%20DataViz') avec Seaborn
