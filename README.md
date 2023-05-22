@@ -16,5 +16,5 @@ Quelques uns de mes projets personnels
 - [Réseaux de convolution (CNN)](https://github.com/AnnaDaridor/Portfolio/tree/main/R%C3%A9seaux%20de%20convolution%20(CNN)) : Santa or not Santa ?
 
 # Applications Streamlit :
-- [Détection de fraudes à la carte de crédit](https://github.com/AnnaDaridor/Portfolio/tree/main/Streamlit)
+- [Détection de fraudes à la carte de crédit](https://github.com/AnnaDaridor/Portfolio/tree/main/Streamlit/D%C3%A9tection_de_fraudes)
 - [Sytème de recommandations de films](https://github.com/AnnaDaridor/Portfolio/tree/main/Streamlit/Recommandations%20de%20films)
